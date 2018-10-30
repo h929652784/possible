@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/possible-common/possible-common.iml" filepath="$PROJECT_DIR$/possible-common/possible-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/possible-manager/possible-manager.iml" filepath="$PROJECT_DIR$/possible-manager/possible-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/possible-manager/possible-manager-dao/possible-manager-dao.iml" filepath="$PROJECT_DIR$/possible-manager/possible-manager-dao/possible-manager-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/possible-manager/possible-manager-interface/possible-manager-interface.iml" filepath="$PROJECT_DIR$/possible-manager/possible-manager-interface/possible-manager-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/possible-manager/possible-manager-pojo/possible-manager-pojo.iml" filepath="$PROJECT_DIR$/possible-manager/possible-manager-pojo/possible-manager-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/possible-manager/possible-manager-service/possible-manager-service.iml" filepath="$PROJECT_DIR$/possible-manager/possible-manager-service/possible-manager-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/possible-manager/possible-manager-web/possible-manager-web.iml" filepath="$PROJECT_DIR$/possible-manager/possible-manager-web/possible-manager-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/possible-parent/possible-parent.iml" filepath="$PROJECT_DIR$/possible-parent/possible-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/possible-search/possible-search.iml" filepath="$PROJECT_DIR$/possible-search/possible-search.iml" />
+    </modules>
+  </component>
+</project>

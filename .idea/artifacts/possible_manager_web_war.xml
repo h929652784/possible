@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="possible-manager-web:war">
+    <output-path>$PROJECT_DIR$/possible-manager/possible-manager-web/target</output-path>
+    <root id="archive" name="possible-manager-web.war">
+      <element id="artifact" artifact-name="possible-manager-web:war exploded" />
+    </root>
+  </artifact>
+</component>
