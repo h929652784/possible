@@ -6,15 +6,26 @@
     i.id, i.title, i.sell_point as sellPoint, i.price, i.num, i.barcode, i.image, i.cid, i.status, i.created, i.updated,c.name as cname
   </sql>
 
+  <sql id="Where_Clause">
+    <where>
+      i.status != 3
+      <if test="query != null and query.title != null and query.title != '' ">
+        and i.title like '%${query.title}%'
+      </if>
+    </where>
+  </sql>
+
   <select id="countItems" resultType="_long">
     select count(1)
-    from tb_item
+    from tb_item i
+    <include refid="Where_Clause" />
   </select>
 
-  <select id="listItemsByPage" parameterType="com.qf.common.pojo.dto.PageInfo" resultType="com.qf.manager.pojo.vo.TbItemCustom">
+  <select id="listItemsByPage" resultType="com.qf.manager.pojo.vo.TbItemCustom">
     select
     <include refid="Base_Column_List" />
     from tb_item i left join tb_item_cat c on i.cid=c.id
-    limit #{offset},#{limit}
+    <include refid="Where_Clause" />
+    limit #{pageInfo.offset},#{pageInfo.limit}
   </select>
 </mapper>

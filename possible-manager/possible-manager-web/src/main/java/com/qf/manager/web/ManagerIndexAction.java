@@ -3,12 +3,13 @@ package com.qf.manager.web;
 import com.qf.common.pojo.dto.ItemResult;
 import com.qf.common.pojo.dto.PageInfo;
 import com.qf.manager.pojo.vo.TbItemCustom;
+import com.qf.manager.pojo.vo.TbItemQuery;
 import com.qf.manager.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * User: DHC
@@ -37,7 +38,13 @@ public class ManagerIndexAction {
 
     @ResponseBody
     @GetMapping("/items")
-    public ItemResult<TbItemCustom> listItemsByPage(PageInfo pageInfo){
-        return itemService.listItemsByPage(pageInfo);
+    public ItemResult<TbItemCustom> listItemsByPage(PageInfo pageInfo,TbItemQuery query){
+        return itemService.listItemsByPage(pageInfo,query);
+    }
+
+    @ResponseBody
+    @PostMapping("/items/batch")
+    public int batchItems(@RequestParam("ids[]") List<Long> ids){
+        return itemService.batchItems(ids);
     }
 }
